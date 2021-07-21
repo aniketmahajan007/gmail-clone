@@ -1,0 +1,46 @@
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header_left{
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+    flex: 0.2;
+}
+.Header_left svg{
+    font-size: 1.2em;
+}
+.Header_left > img{
+    width: 130px;
+    margin-left: 10px;
+}
+
+.Header_center{
+    display: flex;
+    align-items: center;
+    flex: 0.6;
+    background: whitesmoke;
+    width: 100%;
+}
+.Header_center > input{
+    outline: none;
+    border: none;
+    margin-left: -4px;
+    background: none;
+    font-size: 0.95em;
+    width: 90%;
+}
+.Header_right{
+    flex:0.2;
+    display: flex;
+    align-items: center;
+    float: right;
+    flex-direction: row-reverse;
+}
+.header_right_items{
+    margin-right: 34px;
+    cursor: pointer;
+}
