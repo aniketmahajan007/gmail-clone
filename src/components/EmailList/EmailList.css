@@ -12,3 +12,69 @@
 .EmailList__headerRight .arrow{
     font-size: 1.2rem;
 }
+
+.MailTab{
+    display: flex;
+    align-items: center;
+}
+.MailTab .Tab{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    padding:10px;
+    max-height: 30px;
+    cursor: pointer;
+}
+.MailTab .Tab:hover{
+    background-color: whitesmoke;
+    border-bottom: 3px solid green!important;
+}
+.MailTab .Tab > h4{
+    margin-left: 1em;
+    font-weight: 100;
+}
+
+.EmailRows{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+    height: 46px;
+}
+.EmailRows:hover{
+    background-color: whitesmoke;
+}
+.EmailRows__options{
+    flex:.2;
+    max-width: 130px;
+}
+.EmailRows__options .MuiIconButton-root{
+    padding:6px;
+}
+.EmailRows__options .Checkbox svg{
+    font-size: 1.2rem;
+}
+.EmailRows__description{
+    flex:.6;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 70vw;
+}
+.EmailRows__description h4{
+    display: inline-block;
+    font-size: 0.94em;
+    width: 180px;
+}
+.EmailRows__description span{
+    font-size: 0.9em;
+}
+.EmailRows__time{
+    flex:.2;
+    text-align: right;
+    padding-right: 10px;
+}
+.EmailRows__time > h4{
+    font-size: 0.9em;
+    font-weight: 500;
+}

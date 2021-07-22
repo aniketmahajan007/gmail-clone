@@ -37,10 +37,10 @@
     flex:0.2;
     display: flex;
     align-items: center;
-    float: right;
     flex-direction: row-reverse;
 }
 .header_right_items{
-    margin-right: 34px;
+    margin-right: 15px;
     cursor: pointer;
+    margin-left:10px;
 }
