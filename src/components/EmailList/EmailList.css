@@ -1,0 +1,14 @@
+.EmailList{
+    flex: 0.8;
+    padding:10px;
+}
+.EmailList__headerLeft .CheckBoxOutlineBlankIcon{
+    font-size: 1.2rem;
+}
+.EmailList__headerRight{
+    float: right;
+    margin-right: 20px;
+}
+.EmailList__headerRight .arrow{
+    font-size: 1.2rem;
+}

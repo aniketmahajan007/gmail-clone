@@ -1,6 +1,6 @@
 import './LeftBar.css';
 import AddIcon from '@material-ui/icons/Add';
-import {Button} from "@material-ui/core";
+import {Button, Icon, IconButton} from "@material-ui/core";
 import InboxIcon from '@material-ui/icons/Inbox';
 import LeftItems from "./LeftItems";
 import StarIcon from '@material-ui/icons/Star';
@@ -9,6 +9,9 @@ import LabelImportantIcon from '@material-ui/icons/LabelImportant';
 import NearMeIcon from '@material-ui/icons/NearMe';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import PersonIcon from '@material-ui/icons/Person';
+import DuoIcon from '@material-ui/icons/Duo';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 export default function LeftBar(){
     return(
@@ -22,6 +25,17 @@ export default function LeftBar(){
             <LeftItems Icon={NearMeIcon} text="Sent" total={0} selected={false} />
             <LeftItems Icon={DraftsIcon} text="Draft" total={0} selected={false} />
             <LeftItems Icon={ArrowDropDownIcon} text="More" total={0} selected={false} />
+            <div className="LeftBar__footer">
+                <IconButton>
+                    <PersonIcon/>
+                </IconButton>
+                <IconButton>
+                    <DuoIcon/>
+                </IconButton>
+                <IconButton>
+                    <PhoneIcon/>
+                </IconButton>
+            </div>
         </div>
     )
 }
