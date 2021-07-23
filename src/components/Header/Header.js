@@ -5,8 +5,9 @@ import {IconButton} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import AppsIcon from '@material-ui/icons/Apps';
-import NotificationsIcon from '@material-ui/icons/Notifications';
+import SettingsIcon from '@material-ui/icons/Settings';
 import Avatar from '@material-ui/core/Avatar'
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 export default function Header(){
     return(
@@ -26,8 +27,9 @@ export default function Header(){
             </div>
             <div className="Header_right">
                 <Avatar alt="User" className="header_right_items user_avatar"/>
-                <NotificationsIcon className="header_right_items" />
                 <AppsIcon className="header_right_items" />
+                <SettingsIcon className="header_right_items" />
+                <HelpOutlineIcon className="header_right_items" />
             </div>
         </div>
     )

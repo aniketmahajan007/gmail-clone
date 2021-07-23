@@ -1,3 +1,43 @@
 .MailView{
     flex:0.8;
 }
+.MailView__body{
+    background-color: whitesmoke;
+    height: 75vh;
+}
+.MailView__content{
+    margin: 20px;
+    height: 100%;
+    background: white;
+    padding: 0px 0px 10px 20px;
+    display: inline-block;
+    width: 94%;
+}
+.MailView__content > h2{
+    font-weight: 100;
+}
+.MailView__content .MailView__Avatar{
+    position: absolute;
+}
+.MailView__content .MailView__senderinfo{
+    margin-left: 3em;
+}
+.MailView__content .MailView__senderinfo > h4{
+    font-size: 0.9em;
+}
+.MailView__content .MailView__senderinfo > span{
+    display: block;
+    margin-top:-1.2em;
+    font-size: 0.86em;
+}
+.MailView__senderinfo__arrow_down{
+    position: absolute;
+    margin-top:-0.13;
+}
+.MailView__timeinfo{
+    float: right;
+    font-size: 0.86em;
+    margin-right: 2em;
+    margin-top:-1em;
+    color:gray;
+}

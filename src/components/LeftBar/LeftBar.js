@@ -12,11 +12,15 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import PersonIcon from '@material-ui/icons/Person';
 import DuoIcon from '@material-ui/icons/Duo';
 import PhoneIcon from '@material-ui/icons/Phone';
+import {useDispatch, useSelector} from "react-redux";
+import {compose_message_open} from '../../features/gmail/gmailSlice';
 
 export default function LeftBar(){
+    const dispatch = useDispatch();
+
     return(
         <div className="LeftBar">
-           <Button className="Compose" startIcon={<AddIcon/>}>Compose</Button>
+           <Button onClick={()=> {dispatch(compose_message_open())}} className="Compose" startIcon={<AddIcon/>}>Compose</Button>
             <br/><br/>
             <LeftItems Icon={InboxIcon} text="Inbox" total={10} selected={true}  />
             <LeftItems Icon={StarIcon} text="Starred" total={0} selected={false} />

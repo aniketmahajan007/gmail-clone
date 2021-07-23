@@ -14,7 +14,7 @@ function App() {
           <div className="main_layout">
             <LeftBar />
             <Switch>
-              <Route path="/viewmail">
+              <Route path="/viewmail/:id">
                 <MailView/>
               </Route>
               <Route path="/">
