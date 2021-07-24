@@ -32,12 +32,11 @@
 }
 .MailView__senderinfo__arrow_down{
     position: absolute;
-    margin-top:-0.13;
+    margin-top:-.1em;
 }
 .MailView__timeinfo{
     float: right;
     font-size: 0.86em;
     margin-right: 2em;
-    margin-top:-1em;
     color:gray;
 }

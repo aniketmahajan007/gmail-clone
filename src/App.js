@@ -5,8 +5,12 @@ import LeftBar from "./components/LeftBar/LeftBar";
 import EmailList from "./components/EmailList/EmailList";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import MailView from "./components/MailView/MailView";
+import ComposeGui from "./components/ComposeGui/ComposeGui";
+import {useSelector} from "react-redux";
 
 function App() {
+
+  const gmail = useSelector(state => state.gmail);
   return (
       <Router>
         <div className="App">
@@ -18,6 +22,9 @@ function App() {
                 <MailView/>
               </Route>
               <Route path="/">
+                {
+                  gmail.compose_message_is_open && <ComposeGui/>
+                }
                 <EmailList/>
               </Route>
             </Switch>

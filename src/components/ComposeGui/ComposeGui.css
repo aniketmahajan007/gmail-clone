@@ -1,0 +1,58 @@
+.ComposeGui{
+    position: absolute;
+    bottom:5px;
+    right: 50px;
+    width: 35%;
+    height: 350px;
+    z-index: 99999;
+    border:1px solid gray;
+    background: whitesmoke;
+}
+.ComposeGui__header{
+    background: rgba(29, 29, 29, 0.95);
+    color:whitesmoke;
+    font-weight: 600;
+    font-size: 0.9em;
+    height: 40px;
+}
+.ComposeGui__header > span{
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.ComposeGui_close_button{
+    float: right;
+}
+.ComposeGui_close{
+    color:white;
+    font-size: 0.85em;
+    margin-top: -.1em;
+}
+.ComposeGui__body{
+    margin-top: -.4em;
+    display: inline-block;
+    background-color: whitesmoke;
+    width: calc(100% - 10px);
+}
+.ComposeGui__body_input{
+    width: 100%;
+    padding:10px 0px 10px 10px;
+    outline:none;
+    border:none;
+    color: rgba(0, 0, 0, 0.92);
+    border-bottom: 1px solid lightgray;
+}
+.ComposeGui__body_input .message{
+    resize: none;
+}
+.ComposeGui__send{
+    background-color: rgba(29, 29, 29, 0.95);
+    height: 48.5px;
+    margin-top: -4px;
+    width: 102.5%;
+}
+.ComposeGui__send > button{
+    color:white;
+    margin: 6px;
+    width: 90px;
+}

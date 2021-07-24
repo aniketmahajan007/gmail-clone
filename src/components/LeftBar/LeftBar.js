@@ -12,7 +12,7 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import PersonIcon from '@material-ui/icons/Person';
 import DuoIcon from '@material-ui/icons/Duo';
 import PhoneIcon from '@material-ui/icons/Phone';
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {compose_message_open} from '../../features/gmail/gmailSlice';
 
 export default function LeftBar(){
