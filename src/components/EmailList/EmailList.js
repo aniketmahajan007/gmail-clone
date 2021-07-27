@@ -5,8 +5,24 @@ import InboxIcon from '@material-ui/icons/Inbox';
 import PeopleIcon from '@material-ui/icons/People';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import EmailRows from "./EmailRows";
+import {useEffect, useState} from "react";
+import {db} from '../../firebase';
+import formatDate from "../../formatDate";
 
 export default function EmailList(){
+    const [emails, setemails] = useState([]);
+    useEffect(()=>{
+            db.collection('email')
+                .orderBy('timestamp','desc')
+                .onSnapshot(snapshot => {
+                        setemails(snapshot.docs.map((docs) => {
+                                return {
+                                        id: docs.id,
+                                        data: docs.data()
+                                }}
+                        ));
+                })
+    },[]);
     return (
         <div className="EmailList">
             <EmailView_header/>
@@ -15,64 +31,14 @@ export default function EmailList(){
                 <Tab Icon={PeopleIcon} title="Social" tabcolor="blue" selected={false} />
                 <Tab Icon={LocalOfferIcon} title="Offers" tabcolor="green" selected={false} />
             </div>
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail mainITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
-            <EmailRows title="007aniketmahajan@gmailc.om" subject="Disposable Mail" description="ITs a dummy mail main" datetime="24 Dec 10:00 A.M."  />
+                {
+                        emails?.map(emails => {
+                                const time = new Date(emails.data.timestamp?.seconds * 1000);
+                                return (
+                                    <EmailRows key={emails.id} id={emails.id} to={emails.data.to} subject={emails.data.subject} description={emails.data.message} datetime={formatDate(time)} />
+                                )
+                        })
+                }
         </div>
     )
 }

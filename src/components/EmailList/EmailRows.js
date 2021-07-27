@@ -1,12 +1,20 @@
 import {Checkbox, IconButton} from "@material-ui/core";
 import {LabelImportantOutlined, StarBorderOutlined} from "@material-ui/icons";
 import {useHistory} from 'react-router-dom'
+import {useDispatch} from "react-redux";
+import {if_message_select} from '../../features/gmail/gmailSlice';
 
-export default function EmailRows({id, subject, title, description, datetime}){
+export default function EmailRows({id,to, subject, description, datetime}){
     const history = useHistory();
+    const dispatch = useDispatch();
+
+    const email_is_clicked = () => {
+        dispatch(if_message_select({id, to, subject, description, datetime}));
+        history.push('/viewmail/'+id)
+    }
 
     return (
-        <div onClick={() => history.push('/viewmail/10')} className="EmailRows">
+        <div onClick={email_is_clicked} className="EmailRows">
             <div className="EmailRows__options">
                 <Checkbox className="Checkbox" />
                 <IconButton>
