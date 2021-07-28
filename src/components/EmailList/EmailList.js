@@ -21,7 +21,7 @@ export default function EmailList(){
                                         data: docs.data()
                                 }}
                         ));
-                })
+                });
     },[]);
     return (
         <div className="EmailList">

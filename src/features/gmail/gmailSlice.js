@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
+    userdata:[],
     compose_message_is_open: false,
     message_selected: {}
 };
@@ -21,10 +22,13 @@ export const gmailSlice = createSlice({
         },
         compose_message_close: state => {
             state.compose_message_is_open = false;
+        },
+        update_user_info: (state, action) => {
+            state.userdata = action.payload
         }
     }
 });
 
-export const { compose_message_close, compose_message_open, if_message_select, if_message_deselect} = gmailSlice.actions;
+export const { update_user_info, compose_message_close, compose_message_open, if_message_select, if_message_deselect} = gmailSlice.actions;
 
 export default gmailSlice.reducer;
