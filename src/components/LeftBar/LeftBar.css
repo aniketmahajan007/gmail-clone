@@ -2,6 +2,10 @@
     flex: 0.2;
     padding:1em;
     padding-left: 0.4em;
+    transition: all .5s;
+}
+.leftBar__Collapse{
+    margin-left: -24vw;
 }
 .LeftBar > .Compose{
     border-radius: 50px;
@@ -46,4 +50,9 @@
 }
 .LeftBar__footer{
     text-align: center;
+}
+@media screen and (max-width: 780px){
+    .LeftBar{
+        margin-left: -24vw;
+    }
 }

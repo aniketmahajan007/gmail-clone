@@ -1,4 +1,4 @@
-import {IconButton} from "@material-ui/core";
+import {IconButton, Tooltip} from "@material-ui/core";
 import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 import {MoveToInbox} from "@material-ui/icons";
 import ReportIcon from '@material-ui/icons/Report';
@@ -22,33 +22,51 @@ export default function MailView_header(){
 
     return(
         <div className="MailView_header">
-            <IconButton onClick={back_to_email_list}>
-                <KeyboardBackspaceIcon/>
-            </IconButton>
-            <IconButton>
-                <MoveToInbox/>
-            </IconButton>
-            <IconButton>
-                <ReportIcon/>
-            </IconButton>
-            <IconButton>
-                <DeleteIcon/>
-            </IconButton>
-            <IconButton>
-                <EmailIcon/>
-            </IconButton>
-            <IconButton>
-                <QueryBuilderIcon/>
-            </IconButton>
-            <IconButton>
-                <CheckCircleIcon/>
-            </IconButton>
-            <IconButton>
-                <LabelImportantIcon/>
-            </IconButton>
-            <IconButton>
-                <MoreVertIcon/>
-            </IconButton>
+            <Tooltip title="Back">
+                <IconButton onClick={back_to_email_list}>
+                    <KeyboardBackspaceIcon/>
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="Archive">
+                <IconButton>
+                    <MoveToInbox/>
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="Report Spam">
+                <IconButton>
+                    <ReportIcon/>
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="Delete">
+                <IconButton>
+                    <DeleteIcon/>
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="Mark as Unread">
+                <IconButton>
+                    <EmailIcon/>
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="Snooze">
+                <IconButton>
+                    <QueryBuilderIcon/>
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="Add to Task">
+                <IconButton>
+                    <CheckCircleIcon/>
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="Mark as Important">
+                <IconButton>
+                    <LabelImportantIcon/>
+                </IconButton>
+            </Tooltip>
+            <Tooltip title="More">
+                <IconButton>
+                    <MoreVertIcon/>
+                </IconButton>
+            </Tooltip>
         </div>
     )
 }

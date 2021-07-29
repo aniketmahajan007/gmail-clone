@@ -11,12 +11,10 @@ export default function Login(){
         auth.
         signInWithPopup(provider).
         then(result => {
-            console.log('Result: ',result);
                 const temp = [{
                     name: result.additionalUserInfo.profile.name,
                     picture: result.additionalUserInfo.profile.picture
                 }];
-                console.log(temp);
                 dispatch(update_user_info(temp));
         }).catch(error => {
             alert(error.message);

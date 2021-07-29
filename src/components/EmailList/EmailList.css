@@ -45,6 +45,7 @@
 }
 .EmailRows:hover{
     background-color: whitesmoke;
+    box-shadow: 1px 1px 0px lightgrey;
 }
 .EmailRows__options{
     flex:.2;
@@ -79,4 +80,24 @@
 .EmailRows__time > h4{
     font-size: 0.9em;
     font-weight: 500;
+}
+.EmailList__Older{
+    position: absolute;
+    margin-top: 35px;
+    font-size: 0.8em;
+    background: #000000b0;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    border-radius: 10px;
+    margin-left: 11px;
+}
+.EmailList__New{
+    position: absolute;
+    margin-top: 35px;
+    font-size: 0.8em;
+    background: #000000b0;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    border-radius: 10px;
+    margin-left: -70px;
 }
